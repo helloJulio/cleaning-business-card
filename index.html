@@ -205,18 +205,18 @@
         
         .cta-buttons {
             display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 15px;
+            grid-template-columns: 1fr 1fr 1fr;
+            gap: 12px;
             margin-bottom: 25px;
         }
         
         .cta-button {
             background: linear-gradient(135deg, #4CAF50, #45a049);
             color: white;
-            padding: 18px 20px;
+            padding: 15px 12px;
             border: none;
             border-radius: 12px;
-            font-size: 1.05em;
+            font-size: 0.95em;
             font-weight: bold;
             cursor: pointer;
             transition: all 0.3s ease;
@@ -246,6 +246,16 @@
         .cta-button.secondary:hover {
             box-shadow: 0 8px 25px rgba(33, 150, 243, 0.4);
             background: linear-gradient(135deg, #1976D2, #2196F3);
+        }
+        
+        .cta-button.tertiary {
+            background: linear-gradient(135deg, #FF9800, #F57C00);
+            box-shadow: 0 4px 15px rgba(255, 152, 0, 0.3);
+        }
+        
+        .cta-button.tertiary:hover {
+            box-shadow: 0 8px 25px rgba(255, 152, 0, 0.4);
+            background: linear-gradient(135deg, #F57C00, #FF9800);
         }
         
         .trust-badges {
@@ -299,6 +309,7 @@
         @media (max-width: 480px) {
             .cta-buttons {
                 grid-template-columns: 1fr;
+                gap: 12px;
             }
             
             .service-grid {
@@ -336,7 +347,7 @@
                     <div class="service-item">🧽 Deep Cleaning</div>
                     <div class="service-item">🏠 Move-in/Move-out</div>
                     <div class="service-item">🪟 Window Cleaning</div>
-                    <div class="service-item">🧹 High pressure clean</div>
+                    <div class="service-item">🧹 Post-Construction</div>
                 </div>
             </div>
             
@@ -369,7 +380,7 @@
                     <div class="contact-icon">⏰</div>
                     <div class="contact-text">
                         <strong>Hours:</strong><br>
-                        Mon-Fri: 8AM-5PM | Sat: 9AM-1PM
+                        Mon-Fri: 8AM-6PM | Sat: 9AM-4PM
                     </div>
                 </div>
             </div>
@@ -378,8 +389,11 @@
                 <a href="tel:+61413387095" class="cta-button">
                     📞 Call Now
                 </a>
-                <a href="sms:+61413387095" class="cta-button secondary">
-                    💬 Text Quote
+                <a href="quote.html" class="cta-button secondary">
+                    📋 Get Free Quote
+                </a>
+                <a href="sms:+61413387095" class="cta-button tertiary">
+                    💬 Text Us
                 </a>
             </div>
             
