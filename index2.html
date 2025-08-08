@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VODOCO SERVICES - Professional Cleaning</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Arial', sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 20px;
+        }
+        
+        .card {
+            max-width: 400px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 20px;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+            overflow: hidden;
+            animation: slideUp 0.6s ease-out;
+        }
+        
+        @keyframes slideUp {
+            from { transform: translateY(30px); opacity: 0; }
+            to { transform: translateY(0); opacity: 1; }
+        }
+        
+        .header {
+            background: linear-gradient(45deg, #4CAF50, #45a049);
+            color: white;
+            padding: 30px 25px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .header::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: repeating-linear-gradient(
+                45deg,
+                transparent,
+                transparent 10px,
+                rgba(255,255,255,0.05) 10px,
+                rgba(255,255,255,0.05) 20px
+            );
+            animation: shine 3s linear infinite;
+        }
+        
+        @keyframes shine {
+            0% { transform: translateX(-100%) translateY(-100%); }
+            100% { transform: translateX(100%) translateY(100%); }
+        }
+        
+        .logo {
+            font-size: 2.5em;
+            margin-bottom: 5px;
+        }
+        
+        .business-name {
+            font-size: 1.8em;
+            font-weight: bold;
+            margin-bottom: 5px;
+            position: relative;
+            z-index: 1;
+        }
+        
+        .tagline {
+            font-size: 1em;
+            opacity: 0.9;
+            position: relative;
+            z-index: 1;
+        }
+        
+        .content {
+            padding: 25px;
+        }
+        
+        .services {
+            margin-bottom: 25px;
+        }
+        
+        .services h3 {
+            color: #333;
+            margin-bottom: 15px;
+            font-size: 1.2em;
+            border-bottom: 2px solid #4CAF50;
+            padding-bottom: 5px;
+        }
+        
+        .service-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 10px;
+        }
+        
+        .service-item {
+            background: #f8f9fa;
+            padding: 12px;
+            border-radius: 8px;
+            font-size: 0.9em;
+            text-align: center;
+            border-left: 3px solid #4CAF50;
+            transition: transform 0.2s;
+        }
+        
+        .service-item:hover {
+            transform: translateX(5px);
+            background: #e8f5e8;
+        }
+        
+        .contact-section {
+            background: #f8f9fa;
+            padding: 20px;
+            border-radius: 10px;
+            margin-bottom: 20px;
+        }
+        
+        .contact-item {
+            display: flex;
+            align-items: center;
+            margin-bottom: 12px;
+            padding: 8px;
+            border-radius: 5px;
+            transition: background 0.2s;
+        }
+        
+        .contact-item:hover {
+            background: white;
+        }
+        
+        .contact-icon {
+            width: 25px;
+            text-align: center;
+            margin-right: 15px;
+            font-size: 1.2em;
+        }
+        
+        .contact-text {
+            flex: 1;
+        }
+        
+        .cta-buttons {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 15px;
+            margin-top: 20px;
+        }
+        
+        .cta-button {
+            background: linear-gradient(45deg, #4CAF50, #45a049);
+            color: white;
+            padding: 15px;
+            border: none;
+            border-radius: 10px;
+            font-size: 1em;
+            font-weight: bold;
+            cursor: pointer;
+            transition: all 0.3s;
+            text-decoration: none;
+            text-align: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .cta-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 20px rgba(76, 175, 80, 0.3);
+        }
+        
+        .cta-button.secondary {
+            background: linear-gradient(45deg, #2196F3, #1976D2);
+        }
+        
+        .cta-button.secondary:hover {
+            box-shadow: 0 10px 20px rgba(33, 150, 243, 0.3);
+        }
+        
+        .trust-badges {
+            display: flex;
+            justify-content: space-around;
+            margin-top: 20px;
+            padding-top: 20px;
+            border-top: 1px solid #eee;
+        }
+        
+        .badge {
+            text-align: center;
+            color: #666;
+            font-size: 0.8em;
+        }
+        
+        .badge-icon {
+            font-size: 1.5em;
+            color: #4CAF50;
+            margin-bottom: 5px;
+        }
+        
+        @media (max-width: 480px) {
+            .cta-buttons {
+                grid-template-columns: 1fr;
+            }
+            
+            .service-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .card {
+                margin: 10px;
+                max-width: none;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="card">
+        <div class="header">
+            <div class="logo">✨</div>
+            <div class="business-name">VODOCO SERVICES</div>
+            <div class="tagline">Making Your Space Shine</div>
+        </div>
+        
+        <div class="content">
+            <div class="services">
+                <h3>Our Services</h3>
+                <div class="service-grid">
+                    <div class="service-item">🏠 Residential Cleaning</div>
+                    <div class="service-item">🏢 Commercial Cleaning</div>
+                    <div class="service-item">🧽 Deep Cleaning</div>
+                    <div class="service-item">🏠 Move-in/Move-out</div>
+                    <div class="service-item">🪟 Window Cleaning</div>
+                    <div class="service-item">🧹 High Pressure clean</div>
+                </div>
+            </div>
+            
+            <div class="contact-section">
+                <div class="contact-item">
+                    <div class="contact-icon">📞</div>
+                    <div class="contact-text">
+                        <strong>Phone:</strong><br>
+                        <a href="tel:+61413387095" style="color: #4CAF50; text-decoration: none;">0413 387 095</a>
+                    </div>
+                </div>
+                
+                <div class="contact-item">
+                    <div class="contact-icon">✉️</div>
+                    <div class="contact-text">
+                        <strong>Email:</strong><br>
+                        <a href="mailto:hello.vodoco@outlook.com" style="color: #4CAF50; text-decoration: none;">hello.vodoco@outlook.com</a>
+                    </div>
+                </div>
+                
+                <div class="contact-item">
+                    <div class="contact-icon">📍</div>
+                    <div class="contact-text">
+                        <strong>Service Area:</strong><br>
+                        Sydney & Surrounding Areas
+                    </div>
+                </div>
+                
+                <div class="contact-item">
+                    <div class="contact-icon">⏰</div>
+                    <div class="contact-text">
+                        <strong>Hours:</strong><br>
+                        Mon-Fri: 8AM-5M | Sat: 9AM-1PM
+                    </div>
+                </div>
+            </div>
+            
+            <div class="cta-buttons">
+                <a href="tel:+61413387095" class="cta-button">
+                    📞 Call Now
+                </a>
+                <a href="sms:+61413387095" class="cta-button secondary">
+                    💬 Text Quote
+                </a>
+            </div>
+            
+            <div class="trust-badges">
+                <div class="badge">
+                    <div class="badge-icon">🛡️</div>
+                    <div>Licensed & Insured</div>
+                </div>
+                <div class="badge">
+                    <div class="badge-icon">⭐</div>
+                    <div>5-Star Rated</div>
+                </div>
+                <div class="badge">
+                    <div class="badge-icon">✅</div>
+                    <div>Satisfaction Guaranteed</div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <script>
+        // Add click tracking for analytics (optional)
+        document.querySelectorAll('.cta-button').forEach(button => {
+            button.addEventListener('click', function(e) {
+                // You can add analytics tracking here
+                console.log('Button clicked:', this.textContent.trim());
+            });
+        });
+        
+        // Add smooth hover effects
+        document.querySelectorAll('.service-item').forEach(item => {
+            item.addEventListener('mouseenter', function() {
+                this.style.transform = 'translateX(5px) scale(1.02)';
+            });
+            
+            item.addEventListener('mouseleave', function() {
+                this.style.transform = 'translateX(0) scale(1)';
+            });
+        });
+    </script>
+</body>
+</html>
