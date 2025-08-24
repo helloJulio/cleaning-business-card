@@ -1,4 +1,5 @@
 import qrcode
+
 from PIL import Image
 
 # Expected public URL of the VCF on GitHub Pages
