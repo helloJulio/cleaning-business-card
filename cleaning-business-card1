@@ -1,0 +1,18 @@
+# Create a downloadable .vcf (vCard) file the user can host on GitHub Pages
+vcard_text = """BEGIN:VCARD
+VERSION:3.0
+N:Lopez;Julio Cesar G;;;
+FN:Julio Cesar G Lopez
+ORG:Vodoco Services
+TITLE:Professional Cleaning
+TEL;TYPE=CELL,VOICE:+61 413 387 095
+EMAIL;TYPE=INTERNET,PREF:hello.vodoco@outlook.com
+URL:https://vodocoservices.com.au
+END:VCARD
+"""
+
+vcf_path = "/mnt/data/Julio_Cesar_G_Lopez.vcf"
+with open(vcf_path, "w", encoding="utf-8") as f:
+    f.write(vcard_text)
+
+vcf_path
